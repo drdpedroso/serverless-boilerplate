@@ -24,13 +24,11 @@ custom:
     webpackConfig: ./webpack.config.js
     includeModules: true
 
-# The `functions` block defines what code to deploy
 functions:
   helloWorld:
-    handler: handler.helloWorld
-    # The `events` block defines how to trigger the handler.helloWorld code
+    handler: handler.getItems
     events:
       - http:
-          path: hello-world
+          path: get-items
           method: get
           cors: true
